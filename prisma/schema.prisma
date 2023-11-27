@@ -7,3 +7,8 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+model UserSubscription {
+  id     String @id @default(cuid())
+  userId String @unique
+}
